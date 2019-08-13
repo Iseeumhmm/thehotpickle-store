@@ -1,0 +1,58 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body, html {
+    // font-family: $font-sans;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: .625; //1 rem = 10px : 10px/16px = 62.5% 
+}
+
+h1 {
+    font-size: 2.8rem;
+}
+.padding_main-x {
+    padding: 0 5rem;
+}
+.row {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
+[class^="col-"], .container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin: 0 !important;
+}
+
+
+a,
+a:link,
+a:visited {
+    color: #ffffff;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.container-fluid {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+
+
+button:focus {outline:0;}
+li:focus {outline:0;}
