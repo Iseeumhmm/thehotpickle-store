@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modification>
+  <name>viethemes - Cart Count</name>
+  <code>viethemes_cart_count</code>
+  <version>1.0</version>
+  <author>viethemes</author>
+  <link>http://www.viethemes.com</link>
+ 
+  <file path="catalog/controller/common/cart.php">
+    <operation>
+      <search><![CDATA[sprintf($this->language->get('text_items'), $this->cart->countProducts() + (isset($this->session->data['vouchers']) ? count($this->session->data['vouchers']) : 0), $this->currency->format($total, $this->session->data['currency']))]]></search>
+      <add position="replace"><![CDATA['<span class="cart-count">' . $this->cart->countProducts() . '</span>']]></add>
+    </operation>
+  </file>
+ 
+  <file path="catalog/controller/checkout/cart.php">
+    <operation>
+      <search><![CDATA[sprintf($this->language->get('text_items'), $this->cart->countProducts() + (isset($this->session->data['vouchers']) ? count($this->session->data['vouchers']) : 0), $this->currency->format($total, $this->session->data['currency']))]]></search>
+      <add position="replace"><![CDATA['<span class="cart-count">' . $this->cart->countProducts() . '</span>']]></add>
+    </operation>
+  </file>
+ 
+</modification>
