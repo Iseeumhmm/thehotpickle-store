@@ -16,11 +16,13 @@ Options -Indexes
 # Order deny,allow
 # Deny from all
 </FilesMatch>
-<IfModule mod_headers.c>
-  <FilesMatch "\.(ttf|ttc|otf|eot|woff|woff2|font.css|css|js)$">
-    Header set Access-Control-Allow-Origin "*"
-  </FilesMatch>
-</IfModule>
+
+#<IfModule mod_headers.c>
+#  <FilesMatch "\.(ttf|ttc|otf|eot|woff|woff2|font.css|css|js)$">
+#    Header set Access-Control-Allow-Origin "*"
+#  </FilesMatch>
+#</IfModule>
+
 # SEO URL Settings
 RewriteEngine On
 # If your opencart installation does not run on the main web folder make sure you folder it does run in ie. / becomes /shop/
