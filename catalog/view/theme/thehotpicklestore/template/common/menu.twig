@@ -35,9 +35,9 @@
     <ul>
         {% for category in categories %}
         <a href="{{ category.href }}">{{ category.name }}</a>
-        <br><br>
+        {# <br><br>
         <li>{{ dump(category) }}</li>
-        <hr>
+        <hr> #}
         {% endfor %}
     </ul>
   </div>
