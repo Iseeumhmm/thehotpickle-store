@@ -41,11 +41,11 @@
     <body>
         <header>
             <div class="logo">
-				<a href="/"><img class="logo-image" src="catalog/view/theme/thehotpicklestore/image/logo.png" alt="Logo"></a>
+				<a href="/"><img class="logo-image" src="catalog/view/theme/thehotpicklestore/image/new_logo.png" alt="Logo"></a>
             </div>
             <nav id="top">
                 <div class="container">
-                    <div class="nav pull-right" id="top-links">
+                    <div class="nav" id="top-links">
                         <ul class="list-inline">
                             <li class="nav-item dropdown">
                                 <a href="{{ account }}" title="{{ text_account }}" class="dropdown-toggle" data-toggle="dropdown" class="nav-link">
@@ -109,21 +109,6 @@
                     </div>
                 </div>
             </nav>
-            <div class="row">
-                <div class="col-sm-4">
-                    <div id="logo">
-                        {% if logo %}
-                            <a href="{{ home }}"><img src="{{ logo }}" title="{{ name }}" alt="{{ name }}" class="img-responsive"/></a>
-                        {% else %}
-                            <h1>
-                                <a href="{{ home }}">{{ name }}</a>
-                            </h1>
-                        {% endif %}
-                    </div>
-                </div>
-                <div class="col-sm-5">{{ search }}</div>
-                <div class="col-sm-3"></div>
-            </div>
         </header>
         {{ menu }}
     </body>

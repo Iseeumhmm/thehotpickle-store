@@ -24,11 +24,26 @@ header {
     top: 1rem;
 }
 
+#top {
+    min-height: 12rem;
+}
+.nav {
+    text-align: center;
+    &-container {
+        width: 100%;
+        text-align: center;
+        nav {
+            z-index: 1000;
+            color: #087005 !important;
+            font-weight: 300;
+            font-size: 18px;
+        }
+    }
+}
+img {vertical-align: unset;}
 .logo {
-    top: 1rem;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    text-align: center;
+    margin: 5rem 0 3rem;
     &-image {
         height: 10rem;
     }
@@ -41,17 +56,7 @@ button.btn.btn-inverse {
     background: transparent;
     font-size: 1.5rem;
 }
-.nav {
-    &-container {
-        width: 100%;
-        nav {
-            z-index: 1000;
-            color: #087005 !important;
-            font-weight: 300;
-            font-size: 18px;
-        }
-    }
-}
+
 .navbar {
     &-mobile-center{
         position: absolute;

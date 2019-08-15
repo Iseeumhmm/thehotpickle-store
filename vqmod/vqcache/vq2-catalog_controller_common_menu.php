@@ -12,6 +12,9 @@ class ControllerCommonMenu extends Controller {
 
 		$categories = $this->model_catalog_category->getCategories(0);
 
+           $this->load->model('tool/image');
+           
+
 		foreach ($categories as $category) {
 			
 			if ($category['top']) {
@@ -32,6 +35,13 @@ class ControllerCommonMenu extends Controller {
 					);
 				}
 
+
+           if($category['image']){
+					$image = $this->model_tool_image->resize($category['image'], 30, 30);
+				} else {
+					$image = false;
+				}
+           
 				$data['categories'][] = array(
 					'name'     => $category['name'],
 					'children' => $children_data,

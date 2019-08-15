@@ -6,7 +6,7 @@ final class Twig {
 	
 	public function __construct() {
 		// include and register Twig auto-loader
-		include_once(DIR_SYSTEM . 'library/template/Twig/Autoloader.php');
+		include_once(\VQMod::modCheck(DIR_SYSTEM . 'library/template/Twig/Autoloader.php'));
 		
 		\Twig_Autoloader::register();
 	}
@@ -17,11 +17,25 @@ final class Twig {
 	
 	public function render($template, $cache = false) {
 		// specify where to look for templates
-		$loader = new \Twig_Loader_Filesystem(DIR_TEMPLATE);
+				
+		$loader = new \Twig_Loader_Filesystem();
+		
+		if (defined('DIR_CATALOG') && is_dir(DIR_MODIFICATION . 'admin/view/template/')) {	
+			$loader->addPath(DIR_MODIFICATION . 'admin/view/template/');
+		} elseif (is_dir(DIR_MODIFICATION . 'catalog/view/theme/')) {
+			$loader->addPath(DIR_MODIFICATION . 'catalog/view/theme/');
+		}
+		
+		$loader->addPath(DIR_TEMPLATE);
 
 		// initialize Twig environment
 				// ************* DEBUG ************* EXCHANGE FOLLOWING LINES
-		$config = array('autoescape' => false);
+		
+				$config = array(
+					'autoescape'	=> false,
+					'debug'			=> true,
+				);
+				
 		// $config = array('autoescape' => false, 'debug' => true);
 
 		if ($cache) {
@@ -29,6 +43,7 @@ final class Twig {
 		}
 
 		$this->twig = new \Twig_Environment($loader, $config);
+$this->twig->addExtension(new \Twig_Extension_Debug());
 				// ************* DEBUG ************* REMOVE FOLLOWING LINE
 		// $this->twig->addExtension(new \Twig_Extension_Debug());
 		

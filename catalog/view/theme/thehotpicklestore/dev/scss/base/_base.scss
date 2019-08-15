@@ -19,6 +19,18 @@ html {
 h1 {
     font-size: 2.8rem;
 }
+
+@media (min-width: 1200px) {
+    .container {
+        width: 100% !important;
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        width: 100% !important;
+    }
+}
+
 .padding_main-x {
     padding: 0 5rem;
 }
