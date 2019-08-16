@@ -13,4 +13,8 @@ catalog/language/
 catalog/model
 image/payment/
 system/
-vqmod/
+vqmod/*.*
+vqmod/.htaccess
+vqmod/install/
+vqmod/logs/
+vqmod/vqcache/
