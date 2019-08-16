@@ -19,11 +19,23 @@
            ]]></search>
            <add><![CDATA[
            if($category['image']){
-					$image = $this->model_tool_image->resize($category['image'], 30, 30);
-				} else {
-					$image = false;
-				}
+                $image = $this->model_tool_image->resize($category['image'], 30, 30);
+            } else {
+                $image = false;
+            }
            ]]></add>
        </operation>
    </file>
+   <file name="catalog/controller/common/menu.php">
+       <operation info="Add image to data sent to menu.twig">
+           <search position="after"><![CDATA[
+           'href'     => $this->url->link('product/category', 'path=' . $category['category_id'])
+           ]]></search>
+           <add><![CDATA[
+           ,
+           'image' => $category['image']
+           ]]></add>
+       </operation>
+    </file>
 </modification>
+

@@ -1,5 +1,17 @@
 header {
     position: relative;
+    .list-inline {
+        width: 100%;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .btn.btn-inverse.btn-block {
+        font-size: 1rem;
+    }
+}
+@media(max-width: 948px){
+    .hide { display: none !important; }
 }
 
 .navbar-nav {
@@ -25,7 +37,7 @@ header {
 }
 
 #top {
-    min-height: 12rem;
+    min-height: 5rem;
 }
 .nav {
     text-align: center;
@@ -43,7 +55,7 @@ header {
 img {vertical-align: unset;}
 .logo {
     text-align: center;
-    margin: 5rem 0 3rem;
+    margin: 2rem 0 2rem;
     &-image {
         height: 10rem;
     }

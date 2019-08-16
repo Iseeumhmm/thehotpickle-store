@@ -16,7 +16,6 @@ class ControllerCommonMenu extends Controller {
            
 
 		foreach ($categories as $category) {
-			
 			if ($category['top']) {
 				// Level 2
 				$children_data = array();
@@ -37,17 +36,20 @@ class ControllerCommonMenu extends Controller {
 
 
            if($category['image']){
-					$image = $this->model_tool_image->resize($category['image'], 30, 30);
-				} else {
-					$image = false;
-				}
+                $image = $this->model_tool_image->resize($category['image'], 30, 30);
+            } else {
+                $image = false;
+            }
            
 				$data['categories'][] = array(
 					'name'     => $category['name'],
 					'children' => $children_data,
 					'column'   => $category['column'] ? $category['column'] : 1,
-					'href'     => $this->url->link('product/category', 'path=' . $category['category_id']),
-					'image' => $image
+					'href'     => $this->url->link('product/category', 'path=' . $category['category_id'])
+
+           ,
+           'image' => $category['image']
+           
 				);
 			}
 		}

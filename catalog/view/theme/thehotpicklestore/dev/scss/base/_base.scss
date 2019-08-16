@@ -22,12 +22,17 @@ h1 {
 
 @media (min-width: 1200px) {
     .container {
-        width: 100% !important;
+        max-width: 100% !important;
     }
 }
 @media (min-width: 992px) {
     .container {
-        width: 100% !important;
+        max-width: 100% !important;
+    }
+}
+@media (min-width: 768px) {
+    .container {
+        max-width: 100% !important;
     }
 }
 
@@ -41,7 +46,7 @@ h1 {
 [class^="col-"], .container {
     padding-left: 0 !important;
     padding-right: 0 !important;
-    margin: 0 !important;
+    margin: 0 auto !important;
 }
 
 
