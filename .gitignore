@@ -1,6 +1,16 @@
 node_modules/
 
+/.htaccess
 .DS_Store
 
 /config.php
+index.php
+/php.ini
+admin/
 admin/config.php
+catalog/controller/
+catalog/language/
+catalog/model
+image/payment/
+system/
+vqmod/
