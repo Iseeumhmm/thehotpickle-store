@@ -1,0 +1,12 @@
+.card {
+    border-color: #F6F6F6;
+    &-body {
+        background-color: #F6F6F6;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &-title {
+        margin: 0;
+    }
+}
